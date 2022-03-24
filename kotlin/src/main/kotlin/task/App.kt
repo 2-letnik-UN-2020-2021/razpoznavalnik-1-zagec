@@ -251,6 +251,7 @@ class Rezognizer(private val scanner: Scanner) {
         else false
 }
 
+
 fun main(args: Array<String>) {
 
     if (Rezognizer(Scanner(Example,File(args[0]).inputStream())).recognize()) {

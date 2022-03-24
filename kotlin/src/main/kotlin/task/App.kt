@@ -222,11 +222,9 @@ class Rezognizer(private val scanner: Scanner) {
     fun recognizeY():Boolean{
         val lookahead = last?.value ?: return true
         if(lookahead == MINUS){
-            recognizeTerminal(MINUS) && recognizeF()
-            return true
+            return (recognizeTerminal(MINUS) && recognizeF())
         } else if(lookahead == PLUS){
-            recognizeTerminal(PLUS) && recognizeF()
-            return true
+            return (recognizeTerminal(PLUS) && recognizeF())
         } else if(recognizeF()){
             return true
         }
